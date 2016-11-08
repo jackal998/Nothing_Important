@@ -1,0 +1,10 @@
+<ul>
+<% @attendees.each do |a| %>
+<li><%= a.name %></li>
+<% end %>	
+</ul>
+
+
+
+<%= link_to "Index(events)", events_path , :class => "btn btn-default" %>
+
