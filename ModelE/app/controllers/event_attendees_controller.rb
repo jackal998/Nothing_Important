@@ -3,6 +3,7 @@ class EventAttendeesController < ApplicationController
 	before_action :find_event
 
 	def index
+		byebug
 		@attendees = @event.attendees
 	end
 	def new
@@ -14,6 +15,7 @@ class EventAttendeesController < ApplicationController
 			flash[:notice] = "新增成功"
 			redirect_to :action => :index
 		else
+			render :action => :new
 		end
 	end
 	def show
